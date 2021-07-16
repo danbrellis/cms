@@ -541,6 +541,9 @@ class ElementQuery extends Query implements ElementQueryInterface
             case 'site':
                 $this->site($value);
                 break;
+            case 'andRelatedTo':
+                $this->andRelatedTo($value);
+                break;
             case 'localeEnabled':
                 Craft::$app->getDeprecator()->log('ElementQuery::localeEnabled()', 'The `localeEnabled` element query param has been deprecated. `status()` should be used instead.');
                 $this->enabledForSite = $value;
